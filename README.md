@@ -23,10 +23,10 @@ In the Supabase SQL editor, run in order:
 1. `supabase/migrations/20261025125527_ecovital_schema.sql`
 2. `supabase/migrations/20261026000000_add_vitals.sql`
 
-## Deploy (Netlify / Vercel)
+## Deploy (Netlify)
 Build command `npm run build`, output directory `dist`. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables, then redeploy.
 
-## Limitations (prototype)
+## Limitations
 - The official risk score is rule-based (guideline thresholds). The ANN is trained on **synthetic** profiles labelled by those rules plus noise, because no clinical dataset exists yet, so it approximates the rules rather than discovering new medical patterns.
 - Single-tenant demo: row-level security is open. Add authentication before storing real personal health data.
 - Decision support only, not medical advice.
